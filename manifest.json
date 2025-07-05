@@ -1,0 +1,44 @@
+{
+    "name": "OptionYatra - Options Trading Advisory",
+    "short_name": "OptionYatra",
+    "description": "SEBI-registered stock and options trading advisory firm providing expert guidance and trading signals",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#1e40af",
+    "theme_color": "#1e40af",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "assets/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "assets/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["finance", "business"],
+    "lang": "en-IN",
+    "dir": "ltr",
+    "scope": "/",
+    "screenshots": [
+        {
+            "src": "assets/screenshot-desktop.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "OptionYatra Desktop View"
+        },
+        {
+            "src": "assets/screenshot-mobile.png",
+            "sizes": "750x1334",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "OptionYatra Mobile View"
+        }
+    ]
+}

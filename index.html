@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptionYatra - Your Trusted Guide in Options Trading | SEBI Registered Advisory</title>
+    <meta name="description" content="OptionYatra is a SEBI-registered stock and options trading advisory firm in India. Get expert trading signals, strategies, and guidance from trusted advisors.">
+    <meta name="keywords" content="options trading, stock advisory, SEBI registered, trading tips, option strategies, Indian stock market">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e40af">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Chart.js for performance charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="assets/logo.png" alt="OptionYatra Logo" class="logo-img">
+                    <span class="logo-text">OptionYatra</span>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" data-section="home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-section="about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-section="services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-section="performance">Track Record</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-section="free-tips">Free Tips</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-section="contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-cta">
+                    <a href="#services" class="btn btn-primary">Explore Packages</a>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <div class="page-section active" id="home-page">
+            <!-- Hero Section -->
+            <section id="home" class="hero">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <span class="hero-badge">
+                                <i class="fas fa-shield-alt"></i>
+                                SEBI Registered Advisory
+                            </span>
+                            <h1 class="hero-title">
+                                Navigate the Markets with 
+                                <span class="gradient-text">Confidence</span>
+                            </h1>
+                            <p class="hero-subtitle">
+                                Your Trusted Guide in Options Trading. Join thousands of traders who rely on OptionYatra for expert guidance, risk-managed strategies, and consistent performance in the Indian stock market.
+                            </p>
+                            <div class="hero-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">5000+</div>
+                                    <div class="stat-label">Happy Traders</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">85%</div>
+                                    <div class="stat-label">Success Rate</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">3+ Years</div>
+                                    <div class="stat-label">Experience</div>
+                                </div>
+                            </div>
+                            <div class="hero-cta">
+                                <a href="#" class="btn btn-primary btn-lg" data-section="services">
+                                    <i class="fas fa-rocket"></i>
+                                    Explore Packages
+                                </a>
+                                <a href="#" class="btn btn-secondary btn-lg" data-section="free-tips">
+                                    <i class="fas fa-gift"></i>
+                                    Get Free Tips
+                                </a>
+                            </div>
+                        </div>
+                        <div class="hero-visual">
+                            <div class="chart-container">
+                                <canvas id="heroChart"></canvas>
+                            </div>
+                            <div class="floating-cards">
+                                <div class="card profit-card">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>+15.2% Today</span>
+                                </div>
+                                <div class="card signal-card">
+                                    <i class="fas fa-bullseye"></i>
+                                    <span>Active Signal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div class="page-section" id="about-page">
+            <!-- About Section -->
+            <section id="about" class="about">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag">About OptionYatra</span>
+                        <h2 class="section-title">Empowering Traders Across India</h2>
+                        <p class="section-subtitle">
+                            OptionYatra is a SEBI-registered advisory firm providing expert guidance in stock and options trading, 
+                            helping retail traders navigate the complexities of the Indian financial markets.
+                        </p>
+                    </div>
+                    
+                    <div class="about-content">
+                        <div class="about-story">
+                            <div class="story-text">
+                                <h3>Our Mission</h3>
+                                <p>
+                                    To empower retail traders through accurate, timely, and ethical trading signals. We believe in 
+                                    transparency, risk management, and building long-term wealth for our clients through disciplined 
+                                    trading strategies.
+                                </p>
+                                
+                                <div class="features-grid">
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-certificate"></i>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h4>SEBI Registered</h4>
+                                            <p>Fully compliant and registered with SEBI for investment advisory services</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h4>Transparent Track Record</h4>
+                                            <p>Publicly verifiable performance metrics and trading history</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h4>Trusted by Thousands</h4>
+                                            <p>Over 5000+ satisfied clients across India trust our advisory services</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-shield-alt"></i>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h4>Risk-Managed Strategies</h4>
+                                            <p>Every recommendation comes with proper risk management and stop-loss levels</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Services Page -->
+        <div class="page-section" id="services-page">
+            <!-- Services Section -->
+            <section id="services" class="services">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag">Our Services</span>
+                        <h2 class="section-title">Choose Your Trading Journey</h2>
+                        <p class="section-subtitle">
+                            Flexible subscription plans designed for traders at every level, from beginners to professionals
+                        </p>
+                    </div>
+                    
+                    <div class="services-grid">
+                        <!-- Starter Plan -->
+                        <div class="service-card">
+                            <div class="card-header">
+                                <div class="plan-icon">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                                <h3 class="plan-name">Starter Plan</h3>
+                                <p class="plan-description">Perfect for beginners starting their trading journey</p>
+                            </div>
+                            
+                            <div class="card-pricing">
+                                <div class="price">₹2,999</div>
+                                <div class="price-period">per month</div>
+                            </div>
+                            
+                            <div class="card-features">
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> Daily Cash & Options Tips</li>
+                                    <li><i class="fas fa-check"></i> Entry & Exit Levels</li>
+                                    <li><i class="fas fa-check"></i> Risk Management Guidance</li>
+                                    <li><i class="fas fa-check"></i> WhatsApp Support</li>
+                                    <li><i class="fas fa-check"></i> Weekly Market Analysis</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="card-cta">
+                                <button class="btn btn-outline">Subscribe Now</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Swing Plan -->
+                        <div class="service-card">
+                            <div class="card-header">
+                                <div class="plan-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <h3 class="plan-name">Swing Plan</h3>
+                                <p class="plan-description">Short-term positional picks for swing traders</p>
+                            </div>
+                            
+                            <div class="card-pricing">
+                                <div class="price">₹4,999</div>
+                                <div class="price-period">per month</div>
+                            </div>
+                            
+                            <div class="card-features">
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> Everything in Starter</li>
+                                    <li><i class="fas fa-check"></i> Swing Trading Calls</li>
+                                    <li><i class="fas fa-check"></i> Position Sizing Guide</li>
+                                    <li><i class="fas fa-check"></i> Technical Analysis Reports</li>
+                                    <li><i class="fas fa-check"></i> Priority Support</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="card-cta">
+                                <button class="btn btn-outline">Subscribe Now</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Pro Plan -->
+                        <div class="service-card featured">
+                            <div class="popular-badge">Most Popular</div>
+                            <div class="card-header">
+                                <div class="plan-icon">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                                <h3 class="plan-name">Pro Plan</h3>
+                                <p class="plan-description">Advanced option strategies for experienced traders</p>
+                            </div>
+                            
+                            <div class="card-pricing">
+                                <div class="price">₹7,999</div>
+                                <div class="price-period">per month</div>
+                            </div>
+                            
+                            <div class="card-features">
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> Everything in Swing</li>
+                                    <li><i class="fas fa-check"></i> Advanced Option Strategies</li>
+                                    <li><i class="fas fa-check"></i> Iron Condors & Straddles</li>
+                                    <li><i class="fas fa-check"></i> Live Market Sessions</li>
+                                    <li><i class="fas fa-check"></i> Portfolio Review</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="card-cta">
+                                <button class="btn btn-primary">Subscribe Now</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Premium Yatra -->
+                        <div class="service-card">
+                            <div class="card-header">
+                                <div class="plan-icon">
+                                    <i class="fas fa-gem"></i>
+                                </div>
+                                <h3 class="plan-name">Premium Yatra</h3>
+                                <p class="plan-description">Complete advisory with dedicated support</p>
+                            </div>
+                            
+                            <div class="card-pricing">
+                                <div class="price">₹12,999</div>
+                                <div class="price-period">per month</div>
+                            </div>
+                            
+                            <div class="card-features">
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> Everything in Pro</li>
+                                    <li><i class="fas fa-check"></i> Dedicated Advisor</li>
+                                    <li><i class="fas fa-check"></i> 1-on-1 Strategy Sessions</li>
+                                    <li><i class="fas fa-check"></i> Custom Risk Assessment</li>
+                                    <li><i class="fas fa-check"></i> 24/7 Premium Support</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="card-cta">
+                                <button class="btn btn-outline">Subscribe Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Free Tips Page -->
+        <div class="page-section" id="free-tips-page">
+            <section id="free-tips" class="free-tips">
+                <div class="container">
+                    <div class="free-tips-content">
+                        <div class="free-tips-text">
+                            <span class="section-tag">Free Trading Tips</span>
+                            <h2 class="section-title">Get Your Daily Dose of Market Insights</h2>
+                            <p class="section-subtitle">
+                                Join our community and receive 1-2 free daily tips directly on your WhatsApp. 
+                                No commitment required - experience our expertise before you subscribe.
+                            </p>
+                            
+                            <div class="benefits-list">
+                                <div class="benefit-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Direct WhatsApp Delivery</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Daily Market Updates</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-gift"></i>
+                                    <span>100% Free Forever</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="free-tips-form">
+                            <form class="signup-form" id="freeSignupForm">
+                                <h3>Start Your Free Journey</h3>
+                                <div class="form-group">
+                                    <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="WhatsApp Number" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Get Free Tips on WhatsApp
+                                </button>
+                                <p class="form-disclaimer">
+                                    By signing up, you agree to receive trading tips and market updates. 
+                                    No spam, unsubscribe anytime.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Track Record Page -->
+        <div class="page-section" id="performance-page">
+            <section id="performance" class="performance">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag">Track Record</span>
+                        <h2 class="section-title">Proven Performance You Can Trust</h2>
+                        <p class="section-subtitle">
+                            Transparent results from our advisory services. All data is verified and publicly available.
+                        </p>
+                    </div>
+                    
+                    <div class="performance-grid">
+                        <div class="performance-chart">
+                            <h3>Monthly Returns (Last 12 Months)</h3>
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                        
+                        <div class="performance-stats">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-percentage"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <div class="stat-value">85.2%</div>
+                                    <div class="stat-label">Success Rate</div>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <div class="stat-value">+24.8%</div>
+                                    <div class="stat-label">Annual Returns</div>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <div class="stat-value">-8.2%</div>
+                                    <div class="stat-label">Max Drawdown</div>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <div class="stat-value">342</div>
+                                    <div class="stat-label">Successful Calls</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonials -->
+                    <div class="testimonials">
+                        <h3>What Our Clients Say</h3>
+                        <div class="testimonials-grid">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <i class="fas fa-quote-left"></i>
+                                    <p>"OptionYatra has transformed my trading journey. Their risk management approach and consistent signals have helped me achieve steady profits."</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <div class="author-name">Rajesh K.</div>
+                                        <div class="author-location">Mumbai, Maharashtra</div>
+                                    </div>
+                                    <div class="testimonial-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <i class="fas fa-quote-left"></i>
+                                    <p>"The clarity in their analysis and timely entry-exit points have significantly improved my trading accuracy. Highly recommended!"</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <div class="author-name">Priya S.</div>
+                                        <div class="author-location">Bangalore, Karnataka</div>
+                                    </div>
+                                    <div class="testimonial-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <i class="fas fa-quote-left"></i>
+                                    <p>"As a beginner, OptionYatra's educational approach and patient guidance helped me understand options trading from the ground up."</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <div class="author-name">Amit P.</div>
+                                        <div class="author-location">Delhi, NCR</div>
+                                    </div>
+                                    <div class="testimonial-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    <!-- Performance Section -->
+    <section id="performance" class="performance">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Track Record</span>
+                <h2 class="section-title">Proven Performance You Can Trust</h2>
+                <p class="section-subtitle">
+                    Transparent results from our advisory services. All data is verified and publicly available.
+                </p>
+            </div>
+            
+            <div class="performance-grid">
+                <div class="performance-chart">
+                    <h3>Monthly Returns (Last 12 Months)</h3>
+                    <canvas id="performanceChart"></canvas>
+                </div>
+                
+                <div class="performance-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value">85.2%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value">+24.8%</div>
+                            <div class="stat-label">Annual Returns</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value">-8.2%</div>
+                            <div class="stat-label">Max Drawdown</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value">342</div>
+                            <div class="stat-label">Successful Calls</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonials -->
+            <div class="testimonials">
+                <h3>What Our Clients Say</h3>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"OptionYatra has transformed my trading journey. Their risk management approach and consistent signals have helped me achieve steady profits."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <div class="author-name">Rajesh K.</div>
+                                <div class="author-location">Mumbai, Maharashtra</div>
+                            </div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"The clarity in their analysis and timely entry-exit points have significantly improved my trading accuracy. Highly recommended!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <div class="author-name">Priya S.</div>
+                                <div class="author-location">Bangalore, Karnataka</div>
+                            </div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"As a beginner, OptionYatra's educational approach and patient guidance helped me understand options trading from the ground up."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <div class="author-name">Amit P.</div>
+                                <div class="author-location">Delhi, NCR</div>
+                            </div>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEBI Compliance Section -->
+    <section class="compliance">
+        <div class="container">
+            <div class="compliance-content">
+                <div class="compliance-info">
+                    <h3>SEBI Registration & Compliance</h3>
+                    <p>OptionYatra is registered with SEBI as an Investment Adviser with Registration Number: <strong>INA000012345</strong></p>
+                    
+                    <div class="compliance-links">
+                        <a href="#" class="compliance-link">
+                            <i class="fas fa-file-alt"></i>
+                            SEBI Registration Certificate
+                        </a>
+                        <a href="#" class="compliance-link">
+                            <i class="fas fa-gavel"></i>
+                            Terms of Service
+                        </a>
+                        <a href="#" class="compliance-link">
+                            <i class="fas fa-shield-alt"></i>
+                            Risk Disclosure
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="risk-disclaimer">
+                    <div class="disclaimer-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="disclaimer-text">
+                        <h4>Important Risk Disclosure</h4>
+                        <p>
+                            Investments in the stock market are subject to market risks. Please read all scheme related 
+                            documents carefully before investing. We do not guarantee returns and past performance is 
+                            not indicative of future results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's Start Your Trading Journey</h2>
+                <p class="section-subtitle">
+                    Have questions? Want to discuss your trading goals? Our team is here to help.
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Call Us</h4>
+                            <p>+91 9876543210</p>
+                            <span>Mon-Fri: 9:00 AM - 6:00 PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Us</h4>
+                            <p>support@optionyatra.com</p>
+                            <span>We'll respond within 24 hours</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>WhatsApp</h4>
+                            <p>+91 9876543210</p>
+                            <span>Quick support & updates</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form class="form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="contactName" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="contactEmail" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="contactPhone" name="phone" placeholder="Your Phone" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="contactSubject" name="subject" required>
+                                <option value="">Select Service Interest</option>
+                                <option value="starter">Starter Plan</option>
+                                <option value="swing">Swing Plan</option>
+                                <option value="pro">Pro Plan</option>
+                                <option value="premium">Premium Yatra</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="contactMessage" name="message" placeholder="Your Message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/logo.png" alt="OptionYatra Logo" class="logo-img">
+                        <span class="logo-text">OptionYatra</span>
+                    </div>
+                    <p class="footer-description">
+                        Your trusted guide in options trading. SEBI-registered advisory firm helping traders 
+                        navigate the Indian financial markets with confidence.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#performance">Track Record</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Starter Plan</a></li>
+                        <li><a href="#services">Swing Plan</a></li>
+                        <li><a href="#services">Pro Plan</a></li>
+                        <li><a href="#services">Premium Yatra</a></li>
+                        <li><a href="#free-tips">Free Tips</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">SEBI Registration</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Risk Disclosure</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 OptionYatra. All rights reserved. | SEBI Registration: INA000012345</p>
+                </div>
+                <div class="footer-disclaimer">
+                    <p>Investments are subject to market risks. Please read all documents carefully before investing.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/919876543210?text=Hi! I'm interested in OptionYatra services" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Newsletter Popup -->
+    <div class="newsletter-popup" id="newsletterPopup">
+        <div class="popup-content">
+            <button class="popup-close" id="popupClose">&times;</button>
+            <div class="popup-header">
+                <h3>Stay Updated with Market Insights</h3>
+                <p>Get weekly trading setups and market analysis directly in your inbox</p>
+            </div>
+            <form class="popup-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
